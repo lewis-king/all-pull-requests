@@ -5,6 +5,8 @@ Modify the following files to fit your needs:
 1. client/config/constants - Update the name of the organisation. This will most likely be the name of your Feature/Product/Project or Programme team.
 2. config/repos.json - Define the URLs to the repos you would like to monitor.
 
+Stack: JavaScript(React, Redux, Node)
+
 **Build**
 
 *Dev:*
