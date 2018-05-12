@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.title {
+  font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.title2 {
+  font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+}

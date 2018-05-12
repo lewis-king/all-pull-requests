@@ -1,0 +1,33 @@
+{
+  "name": "all-pull-requests",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "postinstall": "webpack --mode production",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "request": "^2.85.0",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
