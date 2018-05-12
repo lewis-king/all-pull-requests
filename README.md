@@ -7,8 +7,11 @@ Modify the following files to fit your needs:
 
 **Build**
 
+*Dev:*
 `webpack-cli --config webpack.config.js --mode development`
 
+*Prod:*
+`webpack-cli --config webpack.config.js --mode production`
 
 **Run**
 
