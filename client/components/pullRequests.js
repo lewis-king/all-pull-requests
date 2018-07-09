@@ -17,6 +17,13 @@ class PullRequest extends Component {
                 <div>Fetching open pull requests...</div>
             )
         }
+        if (openPullRequests.length == 0) {
+            return (
+              <div>
+                  There are no open pull requests
+              </div>
+            )
+        }
         return (
             <div>
                 {openPullRequests.map((openPullRequest, i) => (
@@ -31,12 +38,14 @@ class PullRequest extends Component {
                                 <th>Title</th>
                                 <th>Author</th>
                                 <th>Created on</th>
+                                <th>Link</th>
                             </tr>
                             {openPullRequest.values.map(openPR => (
                                 <tr key={openPR.id}>
                                     <td>{openPR.title}</td>
                                     <td>{openPR.author.display_name}</td>
                                     <td>{new Date(openPR.created_on).toUTCString()}</td>
+                                    <td align="center"><a href={openPR.links.html.href}>Open Pull Request</a></td>
                                 </tr>
                             ))}
                             </tbody>

@@ -15,3 +15,7 @@ a {
 .title2 {
   font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+th, td {
+  border-style: solid;
+}
