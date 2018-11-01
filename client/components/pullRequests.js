@@ -12,7 +12,7 @@ class PullRequest extends Component {
     }
 
     render() {
-        var dateOptions = {year: 'numeric', month: 'short', day: 'numeric'};
+        const dateOptions = {year: 'numeric', month: 'short', day: 'numeric'};
 
         const openPullRequests = this.props.openPullRequests;
         if (!openPullRequests) {
