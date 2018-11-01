@@ -4,6 +4,7 @@ import {fetchOpenPullRequests} from "../actions/index";
 
 class PullRequest extends Component {
 
+
     componentDidMount() {
         console.log("In component did mount");
         this.props.fetchOpenPullRequests();
@@ -11,6 +12,8 @@ class PullRequest extends Component {
     }
 
     render() {
+        var dateOptions = {year: 'numeric', month: 'short', day: 'numeric'};
+
         const openPullRequests = this.props.openPullRequests;
         if (!openPullRequests) {
             return (
@@ -31,23 +34,29 @@ class PullRequest extends Component {
                         <br/>
                         <div className="title2">
                             Repository: {openPullRequest.values[0].destination.repository.name}
+                            <br/>
                         </div>
-                        <table key={i}>
+                        <table id='tableID' key={i}>
                             <tbody>
                             <tr key={i}>
                                 <th>Title</th>
                                 <th>Author</th>
                                 <th>Created on</th>
+                                <th>Hours Up</th>
                                 <th>Link</th>
                             </tr>
                             {openPullRequest.values.map(openPR => (
                                 <tr key={openPR.id}>
-                                    <td>{openPR.title}</td>
-                                    <td>{openPR.author.display_name}</td>
-                                    <td>{new Date(openPR.created_on).toUTCString()}</td>
-                                    <td align="center"><a href={openPR.links.html.href}>Open Pull Request</a></td>
+                                    <td class="PRTitle">{openPR.title}</td>
+                                    <td class="author">{openPR.author.display_name}</td>
+                                    <td class="created">{new Date(openPR.created_on).toLocaleDateString('en-GB', dateOptions)}</td>
+                                    <td className={parseInt(((new Date() - new Date(openPR.created_on)) / 3600000).toFixed(0)) > 24 ? "red" :
+                                    (parseInt(((new Date() - new Date(openPR.created_on)) / 3600000).toFixed(0)) < 6 ? "green" : "yellow")}>
+                                    {((new Date() - new Date(openPR.created_on)) / 3600000).toFixed(0)}</td>
+                                    <td class="link"><a href={openPR.links.html.href}>Open Pull Request</a></td>
                                 </tr>
                             ))}
+                                <br/>
                             </tbody>
                         </table>
                     </div>

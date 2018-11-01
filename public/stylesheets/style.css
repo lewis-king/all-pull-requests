@@ -13,9 +13,45 @@ a {
 }
 
 .title2 {
-  font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
-th, td {
-  border-style: solid;
+tr, th {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #14366E;
+}
+
+a {
+    color: #14366E;
+}
+
+.PRTitle {
+    width: 500px;
+}
+
+.author, .created, .hoursUp, .link {
+    width: 150px;
+    text-align: center;
+}
+
+.red {
+    color: #FF0000;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.yellow {
+    color: #FFCC00;
+    width: 150px;
+    text-align: center;
+}
+
+.green {
+    color: #33CC33;
+    width: 150px;
+    text-align: center;
 }
