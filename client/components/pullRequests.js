@@ -17,9 +17,7 @@ class PullRequest extends Component {
         const dateOptions = {year: 'numeric', month: 'short', day: 'numeric'};
         const openPullRequests = this.props.openPullRequests;
         if (!openPullRequests) {
-            return (
-                <div>Fetching open pull requests...</div>
-            )
+            return <img className="spinner" src="Spinner.svg"/>
         }
         if (openPullRequests.length == 0) {
             return (
