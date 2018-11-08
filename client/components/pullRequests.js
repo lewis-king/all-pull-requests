@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchOpenPullRequests} from "../actions/index";
-const moment = require('moment-business-time');
+import moment from "moment-business-time";
 
 moment.locale('en', {
             holidays:
