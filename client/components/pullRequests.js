@@ -5,7 +5,7 @@ import moment from "moment-business-time";
 
 moment.locale('en', {
             holidays:
-                ['*-01-01','*-05-01','*-05-31','*-08-31','*-12-25','*-12-26','*-12-27','*-12-28','*-12-29','*-12-30','*-12-31']
+                ['*-01-01','*-12-25','*-12-26']
         });
 
 class PullRequest extends Component {
@@ -55,7 +55,7 @@ class PullRequest extends Component {
                                     <td className="PRTitle">{openPR.title}</td>
                                     <td className="author">{openPR.author.display_name}</td>
                                     <td className="created">{new Date(openPR.created_on).toLocaleDateString('en-GB', dateOptions)}</td>
-                                    <td className={(this.calculateHours(openPR.created_on) > 24 ? "red" : this.calculateHours(openPR.created_on) < 6 ? "green" : "yellow")}>
+                                    <td className={(this.calculateHours(openPR.created_on) > 24 ? "red" : this.calculateHours(openPR.created_on) < 8 ? "green" : "yellow")}>
                                     {(this.calculateHours(openPR.created_on))}</td>
                                     <td class="link"><a href={openPR.links.html.href}>Open Pull Request</a></td>
                                 </tr>
